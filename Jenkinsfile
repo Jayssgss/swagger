@@ -4,24 +4,24 @@ pipeline {
     stages {
 		stage("Checkout") {
 			steps {
-				checkout scm  // Forces Git checkout explicitly
+				git url: 'https://github.com/Jayssgss/swagger-jenkins.git', branch: 'main'
             }
         }
 		stage("Build") {
 			steps {
-				echo "building the application"  // Fixed quotes
+				echo "building the application"
             }
         }
 
         stage("Test") {
 			steps {
-				echo "testing the application"  // Fixed quotes
+				echo "testing the application"
             }
         }
 
         stage("Deploy") {
 			steps {
-				echo "deploying the application"  // Fixed quotes
+				echo "deploying the application"
             }
         }
     }

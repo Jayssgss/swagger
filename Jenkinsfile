@@ -2,6 +2,11 @@ pipeline {
 	agent any
 
     stages {
+		stage("Checkout") {
+			steps {
+				checkout scm  // Forces Git checkout explicitly
+            }
+        }
 		stage("Build") {
 			steps {
 				echo "building the application"  // Fixed quotes
